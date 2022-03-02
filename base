@@ -1,2 +1,6 @@
 Создание базы с проверкой на существование:
 create database if exists shtalina;
+
+
+Удаление базы данных:
+drop database if exists shtalina;
