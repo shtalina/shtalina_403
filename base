@@ -1,1 +1,2 @@
-1.
+Создание базы с проверкой на существование:
+create database if exists shtalina;
