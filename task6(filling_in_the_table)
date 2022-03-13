@@ -1,0 +1,44 @@
+ALTER TABLE users
+  ADD email VARCHAR(50) NOT NULL AFTER birthday, 
+  ADD street VARCHAR(50) NOT NULL AFTER email, 
+  ADD addr_index INT(15) NOT NULL AFTER street, 
+  ADD phone INT(15) NOT NULL AFTER addr_index, 
+  ADD company VARCHAR(50) NOT NULL AFTER phone, 
+  ADD job VARCHAR(50) NOT NULL AFTER `company`,
+  ADD city VARCHAR(50) NOT NULL DEFAULT 'Tomsk';
+  
+ALTER TABLE users
+ADD CONSTRAINT UNIQUE (name, surname, patronymic,birthday, email, addr_index, phone)
+
+INSERT INTO users (name, surname, patronymic, birthday, email,street, addr_index, phone, company, job)
+VALUES ('Jan', 'Valer', 'Hansen', '1999/02/09', 'JanVHansen@dayrep.com ','Jacksons','1235321','7272060708',
+        'Sholls Colonial Cafeteria', 'Personal appearance worker'),
+        ('Elizabeth', 'Elber', 'Garza', '1997/12/23', 'ElizabethEGarza@rhyta.com','Cottrill Lane','63129','3144163637',
+        'Grodins', 'Quality assurance inspector'),
+        ('Maria', 'Pilly', 'Gillian', '1964/06/11', 'MariaPGillian@rhyta.com','Garfield Road','61602','3095956055',
+        'Sun Foods', 'Web programmer'),
+        ('Jason', 'Sane', 'Huff', '1982/10/21', 'JasonSHuff@jourrapide.com','Bel Meadow Drive','91762','9093959045',
+        'Fedco', 'Offset lithographic press operator'),
+        ('Marvin', 'Ernib', 'Collier', '1991/04/21', 'MarvinECollier@jourrapide.com','Cambridge Court','72855','4799633137',
+        'Quickbiz', 'Career-technical teacher'),
+        ('Jaime', 'Jare', 'Moore', '1999/10/22', 'JaimeJMoore@rhyta.com','Liberty Avenue','92704','7144372054',
+        'Two Pesos', 'Research dietitian'),
+        ('Ann', 'Case', 'Hatmaker', '1972/02/05', 'AnnCHatmaker@jourrapide.com','Walkers Ridge Way','60654','6302162822',
+        '10,000 Auto Parts', 'Administrative support specialist'),
+        ('Timothy', 'Matt', 'Jones', '2000/11/11', 'TimothyMJones@dayrep.com','Saint Marys Avenue','13611','3158462160',
+        'Intelacard', 'Maxillofacial surgeon'),
+        ('Lupe', 'Samm', 'Allen', '1999/02/11', 'LupeSAllen@jourrapide.com','Aaron Smith Drive','17055','7176917106',
+        'Twin Electronics', 'Leasing consultant'),
+        ('Mildred', 'Jakk', 'Keefe', '1971/08/01', 'MildredJKeefe@dayrep.com','College View','62928','6186724997',
+        'Solution Answers', 'Radiologic technologist'),
+        ('Miguel', 'Emma', 'Hanna', '2001/11/03', 'MiguelEHanna@rhyta.com','Hampton Meadows','01720','9783771853',
+        'Good Guys', 'High school counselor'),
+        ('Tammy', 'Danny', 'Palmer', '1977/03/02', 'TammyDPalmer@dayrep.com','Alexander Drive','76201','9404420265',
+        'Eagle Food Centers', 'Jewelry appraiser'),
+        ('Paul', 'Villy', 'ONeill', '1988/04/21', 'PaulVONeill@armyspy.com','Valley Drive','19106','2673513108',
+        'Architectural Genie', 'Registrar'),
+        ('George', 'Nol', 'Wood', '1996/02/11', 'GeorgeNWood@jourrapide.com','Bryan Street','27407','3363140795',
+        'One-Up Realty', 'ABE teacher'),
+        ('Steve', 'Gust', 'Matthews', '1999/01/12', 'SteveGMatthews@dayrep.com','Arrowood Drive','32207','9045470000',
+        'Young @ Heart', 'Electronic publisher');
+       
