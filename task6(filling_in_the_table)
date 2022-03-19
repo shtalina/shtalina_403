@@ -5,7 +5,7 @@ ALTER TABLE users
   ADD phone TEXT(15) NOT NULL UNIQUE AFTER addr_index, 
   ADD company VARCHAR(50) NOT NULL UNIQUE AFTER phone, 
   ADD job VARCHAR(50) NOT NULL UNIQUE AFTER company,
-  ADD city VARCHAR(50) NOT NULL UNIQUE DEFAULT 'Tomsk';
+  ADD city VARCHAR(50) NOT NULL DEFAULT 'Tomsk';
   ADD gedner TINYINT(1); 
   
 INSERT INTO users (name, surname, patronymic, birthday, email,street, addr_index, phone, company, job)
