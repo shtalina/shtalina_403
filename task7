@@ -5,7 +5,28 @@ CREATE TABLE company(
   INN BIGINT(20) NOT NULL UNIQUE,
   OGRN BIGINT(20) NOT NULL UNIQUE,
   address TEXT(100) NOT NULL UNIQUE);
-  
+
+INSERT INTO company (name, director, INN, OGRN, address)
+VALUES ('Sholls Colonial Cafeteria', 'Michael E. Boyd', 7094739231, 1020390120, 'Koontz Lane Sherman Oaks'),
+	   ('Grodins', 'Rodney P. Cook', 798238481, 19941020, 'Rosebud Avenue Little Rock'),
+       ('Sun Foods', 'Eric E. Collins', 71823812, 10023042, 'Cheshire Road Bridgeport'),
+       ('Fedco', 'Ralph I. Harvey', 71239192, 12300120, 'Black Oak Hollow Road Morgan Hill'),
+       ('Quickbiz', 'Jeri M. Beyer', 71230020, 12381920, 'Hanover Street New York'),
+       ('Two Pesos', 'Yolanda J. Diaz', 74123742, 19293912, 'Grand Avenue Longwood'),
+       ('10 000 Auto Parts', 'Heather G. West', 71129491, 10029391, 'Marion Street Columbia'),
+       ('Intelacard', 'Robert E. Yopp', 712999419, 12301292, 'Wilmar Farm Road Beltsville'),
+       ('Twin Electronics', 'Deana M. Ford', 78812931, 10203123, 'White Oak Drive Kansas City'),
+       ('Solution Answers', 'Bobby M. Cass', 76626162, 11230123, 'Highland View Drive Sacramento');
+
 CREATE TABLE city(
   id_city INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  city VARCHAR(100) NOT NULL UNIQUE);
+  name_rus VARCHAR(100) NOT NULL UNIQUE, 
+  name_eng VARCHAR(100) NOT NULL UNIQUE);
+  
+INSERT INTO city (name_rus, name_eng) VALUES 
+('Томск', 'Tomsk'),
+('Москва', 'Moscow');
+
+
+       
+ 
