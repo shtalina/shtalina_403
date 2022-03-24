@@ -1,3 +1,11 @@
+CREATE TABLE gender 
+(id INT PRIMARY KEY AUTO_INCREMENT,
+name_RUS VARCHAR(50),
+name_ENG VARCHAR(50));
+
+INSERT INTO gender (name_rus, name_eng) 
+VALUES ('мужской', 'male'), ('женский', 'female');
+
 CREATE TABLE company(
   id_company int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   name varchar(100) not NULL UNIQUE,
@@ -8,7 +16,7 @@ CREATE TABLE company(
 
 INSERT INTO company (name, director, INN, OGRN, address)
 VALUES ('Sholls Colonial Cafeteria', 'Michael E. Boyd', 7094739231, 1020390120, 'Koontz Lane Sherman Oaks'),
-	   ('Grodins', 'Rodney P. Cook', 798238481, 19941020, 'Rosebud Avenue Little Rock'),
+       ('Grodins', 'Rodney P. Cook', 798238481, 19941020, 'Rosebud Avenue Little Rock'),
        ('Sun Foods', 'Eric E. Collins', 71823812, 10023042, 'Cheshire Road Bridgeport'),
        ('Fedco', 'Ralph I. Harvey', 71239192, 12300120, 'Black Oak Hollow Road Morgan Hill'),
        ('Quickbiz', 'Jeri M. Beyer', 71230020, 12381920, 'Hanover Street New York'),
@@ -26,6 +34,9 @@ CREATE TABLE city(
 INSERT INTO city (name_rus, name_eng) VALUES 
 ('Томск', 'Tomsk'),
 ('Москва', 'Moscow');
+
+ALTER TABLE users ALTER COLUMN city SET DEFAULT 1;
+ALTER TABLE users MODIFY COLUMN city TINYINT(1);
 
 
        
