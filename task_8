@@ -1,0 +1,31 @@
+UPDATE users SET gender = 1;
+UPDATE users SET gender = 2 WHERE id in (2,3,6,7,11);
+
+ALTER TABLE users DROP CONSTRAINT company;
+
+ALTER TABLE users MODIFY COLUMN gender INT(10);
+ALTER TABLE users 
+ADD CONSTRAINT gender 
+FOREIGN KEY gender REFERENCES gender(id);
+
+
+UPDATE users SET company = 1 WHERE id in (1,2,3);
+UPDATE users SET company = 2 WHERE id in (4,5);
+UPDATE users SET company = 3 WHERE id in (6,7);
+UPDATE users SET company = 4 WHERE id in (7,8);
+UPDATE users SET company = 5 WHERE id = 9;
+UPDATE users SET company = 6 WHERE id = 10;
+UPDATE users SET company = 7 WHERE id in (11,12);
+UPDATE users SET company = 8 WHERE id = 14;
+UPDATE users SET company = 9 WHERE id = 15;
+UPDATE users SET company = 10 WHERE id =13;
+
+
+ALTER TABLE users MODIFY COLUMN company INT(10);
+
+ALTER TABLE users
+ADD CONSTRAINT company
+FOREIGN KEY (company)
+REFERENCES company(id_company);
+
+
