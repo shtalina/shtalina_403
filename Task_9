@@ -12,6 +12,7 @@ ADD COLUMN age INT(11);
 
 UPDATE users SET age = (YEAR(CURRENT_DATE) - YEAR(birthday));
 
+SELECT AVG(age) AS average, MAX(age) AS max, MIN(age) AS min FROM users;
 SELECT AVG(age) AS average, MAX(age) AS max, MIN(age) AS min 
 FROM users WHERE city = 1;
 SELECT AVG(age) AS average, MAX(age) AS max, MIN(age) AS min 
